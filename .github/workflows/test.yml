@@ -12,6 +12,11 @@ jobs:
         gemfile:
         - v7.gemfile
         - implicitconv.gemfile
+        num:
+        - 1
+        - 2
+        - 3
+        - 4
 
     runs-on: ubuntu-latest
 
@@ -24,18 +29,6 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
 
     - run: bundle install --gemfile=${{ matrix.gemfile }}
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
-    - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
     - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
     - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb
     - run: BUNDLE_GEMFILE=${{ matrix.gemfile }} bundle exec ruby bm.rb

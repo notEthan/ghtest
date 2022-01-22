@@ -1,0 +1,4 @@
+source "https://rubygems.org"
+git 'https://github.com/notEthan/rails.git', branch: 'as_json_implicit_conversion' do
+  gem 'activesupport'
+end
